@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>CALCULATOR</title>
+    <script>
+    
+        var Hour = new Date().getHours();
+        var Message;
+        if (Hour < 12)
+        {
+           Message = "Good morning!";
+        }
+        else if (Hour < 18) 
+        {
+           Message = "Good afternoon!";
+        }
+        else
+        {
+           Message = "Good evening!";
+        }
+        alert(Message);
+    </script>
+
+    <script>
+    function add()
+    {
+        var num1 ,num2, sum ;
+        num1=parseInt(document.getElementById("first").value);
+        num2=parseInt(document.getElementById("second").value);
+        sum = num1+num2;
+        document.getElementById("answer").value=sum;
+        document.body.style.background="aqua";
+    }
+    </script>
+    
+</head>
+    <body style="padding: 150px 0;" bgcolor="cornflower">
+        <center>
+           <h1>CALCULATOR</h1>
+           <hr>
+           <p>Number1:
+                <input id="first" placeholder="Enter your number1" required></p>
+           <p>Number2: <input id="second" placeholder="Enter your number2" required></p>
+           <p>Total : <input id="answer"></p>
+           <hr>
+           <input  style= "text-align: center;" type="button" value="ADD"  onclick="add()" >  
+        </center>
+        
+    </body>
+</html>
+
+
